@@ -24,7 +24,7 @@ function MyHeader() {
                     <Link to="/products">Ürünler</Link>
                 </Menu.Item>
                 <Menu.Item key="3" icon={<LaptopOutlined/>}>
-                    <Button onClick={logout}>Çıkış Yap</Button>
+                    <a onClick={logout}>Çıkış Yap</a>
                 </Menu.Item>
             </Menu>
         </Header>
