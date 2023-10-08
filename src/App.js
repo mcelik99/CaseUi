@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from "react"
 import Login from "./Pages/Login";
-import Footer from "./Components/Layout/Footer";
+import MyFooter from "./Components/Layout/MyFooter";
 import {BrowserRouter} from 'react-router-dom';
 import AppRouter from "./AppRouter";
 import {AppContext} from "./Context/AppContext"
@@ -19,7 +19,7 @@ function App() {
 
     const token = getToken();
 
-    if (token) {
+    if (!token) {
         return <Login/>
     }
 
@@ -42,7 +42,7 @@ function App() {
                             </Col>
                         </Row>
                     </Content>
-                    <Footer/>
+                    <MyFooter/>
                 </BrowserRouter>
             </div>
         </>
