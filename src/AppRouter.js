@@ -5,6 +5,7 @@ import Login from './Pages/Login';
 import Products from './Pages/Products';
 import User from "./Pages/User";
 import ProductCreate from "./Pages/ProductCreate";
+import ProductDetail from "./Pages/ProductDetail";
 
 
 
@@ -20,6 +21,7 @@ const AppRouter = (
         <Route path="/create" element={<ProductCreate/>}></Route>
 
         <Route path="/products" element={<Products/>}></Route>
+        <Route path="/products/:id" element={<ProductDetail/>}></Route>
 
         <Route path="/login" element={<Login/>}/>
 

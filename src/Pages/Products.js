@@ -38,6 +38,9 @@ const Products = () => {
             key: 'action',
             render: (_, record) => (
                 <Space size="middle">
+                    <Link to={"/products/"+record.id}>
+                        Detay
+                    </Link>
                     <Button type="default" onClick={()=>deleteProduct(record.id)}>
                         Sil
                     </Button>
