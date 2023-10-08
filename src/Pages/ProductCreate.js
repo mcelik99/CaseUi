@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Input, InputNumber, Button, Upload, message } from 'antd';
-import { UploadOutlined } from '@ant-design/icons';
+import {Form, Input, InputNumber, Button, Upload, message, Breadcrumb, Row, Col} from 'antd';
+import {ArrowLeftOutlined, UploadOutlined} from '@ant-design/icons';
+import {Link} from "react-router-dom";
 
 const ProductCreate = () => {
   const [form] = Form.useForm();
@@ -23,13 +24,26 @@ const ProductCreate = () => {
 
   return (
     <div>
-      <h1>Ürün Oluştur</h1>
+        <Breadcrumb>
+          <Breadcrumb.Item>Anasyafa</Breadcrumb.Item>
+          <Breadcrumb.Item>Ürün Listesi</Breadcrumb.Item>
+          <Breadcrumb.Item>Ürün Oluştur</Breadcrumb.Item>
+        </Breadcrumb>
+        <Row>
+          <Col span={12}>
+            <h1>Ürün Oluştur</h1>
+          </Col>
+          <Col span={12}>
+            <Link type="default" to="/products" style={{float: "right"}} icon={<ArrowLeftOutlined/>}>
+              Geri
+            </Link>
+          </Col>
+        </Row>
+
       <Form
         form={form}
         name="product_create"
         onFinish={onFinish}
-        labelCol={{ span: 6 }}
-        wrapperCol={{ span: 18 }}
       >
         <Form.Item
           label="Ürün Adı"
@@ -73,7 +87,7 @@ const ProductCreate = () => {
           </Upload>
         </Form.Item>
 
-        <Form.Item wrapperCol={{ offset: 6, span: 18 }}>
+        <Form.Item>
           <Button type="primary" htmlType="submit">
             Kaydet
           </Button>

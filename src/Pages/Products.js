@@ -54,7 +54,6 @@ const Products = () => {
         {id: 2, name: 'Laptop', price: 20, stock: 15},
         {id: 3, name: 'PlayStation', price: 30, stock: 20},
     ];
-
     const deleteProduct = (id) => {
         console.log(id);
     }
@@ -82,5 +81,4 @@ const Products = () => {
         </div>
     );
 };
-
 export default Products;
