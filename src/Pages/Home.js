@@ -6,14 +6,14 @@ export default function Home() {
         <>
             <Row>
                 <Col span={12}>
-                    <Card size="small" title="Yeni Ürün"  >
+                    <Card size="small" title="En Ucuz Ürün"  >
                         <h2>
                             İphone 15
                         </h2>
                     </Card>
                 </Col>
                 <Col span={12}>
-                    <Card size="small" title="Ayın En Çok Satan Ürünü" >
+                    <Card size="small" title="Tükenen Ürün" >
                         <h2>
                             Sony Vaio Laptop
                         </h2>
